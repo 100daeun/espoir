@@ -306,8 +306,10 @@
     </footer>
   </div>
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="js/jquery-3.7.1.min.js"></script>
   <script>
+    //메뉴열기
     $(".btn_ham").click(function () {
       $(".mgnb_wrap").fadeIn();
     });
@@ -316,6 +318,13 @@
       $(".mgnb_wrap").fadeOut();
     });
 
+   //aos 동작열기
+    AOS.init({
+      duration: 2000,
+      once: true,
+    });
+
+    //slide
     const banner_list = new Swiper(".banner_list", {
       pagination: {
         el: '.swiper-pagination',
@@ -344,3 +353,4 @@
 
 
 </html>
+
